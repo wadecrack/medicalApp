@@ -1,0 +1,33 @@
+
+server:
+  port: 8080
+
+
+  spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/conference   #?????
+    username: root                                                             #???
+    password: 1234                                                #??
+
+
+
+  #Mybatis??
+  mybatis:
+  configuration:
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  map-underscore-to-camel-case: true
+
+  #????
+  logging:
+  level:
+  org.springframework.jdbc.support.JdbcTransactionManager: debug
+
+  #???
+  aliyunaliyun:
+  oss:
+  endpoint: https://oss-cn-beijing.aliyuncs.com
+  accessKeyId: LTAI5tKbQ35juZ6ZA4QEuHN4
+  accessKeySecret: McBycPO2plXrLJPhCpiK5hRZpZkMtg
+  bucketName: muzhizhi-web-lexarn
